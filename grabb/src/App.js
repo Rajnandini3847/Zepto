@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from 'react';
+import styled from 'styled-components';
+import Header from './components/Header/Header';
+import Hero from './components/Hero/Hero';
+import ServiceCards from './components/ServiceCards/ServiceCards';
+import PopularItems from './components/PopularItems/PopularItems';
+
+
+const AppContainer = styled.div`
+  font-family: 'Arial', sans-serif;
+  padding: 10px;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContainer>
+      <Header/>
+      <Hero />
+      <ServiceCards/>
+      <PopularItems/>
+    </AppContainer>
   );
 }
 
